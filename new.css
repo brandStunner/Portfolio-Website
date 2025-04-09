@@ -1,0 +1,789 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Della+Respira&family=Georama:wght@400;600;800&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+/* -----------------Navigation Styling---------------- */
+
+.navbar{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    padding: 20px 0;
+    font-family: Georama;
+    transition: all 0.3s ease;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* to be changed */
+.navbar.sticky{
+    padding: 15px 0;
+    background: rgb(0, 0, 0);
+}
+.navbar .max-width {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: rgb(255, 255, 0);
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span{
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #ffffff;
+}
+.navbar .logo a:hover{
+    color: rgb(209, 183, 36);
+}
+
+.navbar .menu li {
+    display: inline-block;
+    list-style: none;
+}
+.navbar .menu li a {
+    color: rgb(255, 255, 0);
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 25px;
+    transition: color 0.3s linear;
+}
+.navbar .menu li a:hover{
+    color: rgb(255, 255, 255);
+}
+
+.navbar.sticky .menu li a:hover{
+    color: rgb(187, 207, 7);
+}
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* scroll up button */
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: rgb(241, 245, 31);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #000000;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/*--------------------- Home Section--------------- */
+.home{
+    background-image: url("image/hero-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    color: #fff;
+    height: 100vh;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Georama, sans-serif;
+}
+
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 45px;
+    font-weight: 500;
+    margin-left: -3px;
+    font-family:  Courgette, serif;
+}
+
+.home .home-content .text-3{
+    font-size: 35px;
+    margin: 5px 0;
+   
+}
+
+.home .home-content .text-3 span{
+    font-weight: 500;
+    color: rgb(251, 255, 12);
+}
+.home .home-content a{
+    display: inline-block;
+    background-color: rgb(255, 255, 0);
+    color: #000000;
+    margin-top: 20px;
+    padding: 12px 36px;
+    font-size: 25px;
+    border-radius: 10px;
+    border: 2px solid rgb(239, 255, 16);
+    transition: all 0.3s ease;
+}
+
+.home .home-content a:hover{
+    color: rgb(255, 255, 255);
+    background: none;
+}
+
+/*All Similar content style section*/
+section{
+    padding: 100px 0;
+}
+
+.about, .services, .skills, .testify, .contact{
+    font-family: Georama, sans-serif;
+}
+.about .about-content,
+.services, .serv-content,
+.skills, .skills-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about{
+    background-color: #000000;
+    color: white;
+}
+section .title{
+    position: relative;
+    font-family: Georama,sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+section .title::before{
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: #ffffff;
+    transform: translateX(-50%);
+    bottom: 0;
+    left: 50%;
+}
+section .title::after{
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(250, 246, 9);
+    background: #000000;
+    transform: translateX(-50%);
+    padding: 5px;
+}
+.about .title::after{
+    content: 'who i am';
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 450px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+
+    clip-path: circle(70% 60%, 60% 30%, 80% 60%);
+    
+    
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    
+}
+
+.about .about-content .right .text span{
+    color: rgb(251, 255, 0);
+}
+
+.about .about-content .right  p{
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Services Styling here */
+.services, .testify{
+    background: #000000;
+    color: #ffffff;
+}
+
+.services .title::before,
+.testify .title::before{
+    background: #fff;
+}
+.services .title::after,
+.testify .title::after{
+    content: 'what i offer';
+    background: #000000;
+}
+.services .serv-content .card{
+    width: calc(33% - 20px);
+    border: 1px yellow solid;
+    text-align: center;
+    background: #000000;
+    border-radius: 6px;
+    padding: 25px 20px;
+    transition: all 0.3s ease;
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover{
+    background: rgb(253, 207, 2);
+    color: #000000;
+    border: 2px solid rgb(255, 255, 255);
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .serv-content .card i{
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease;
+}
+.services .serv-content .card:hover i{
+    color: #000000;
+}
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0 7px 0;
+}
+
+/* -------------------------Skill Section Starts Here------------ */
+.skills {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.skills-section {
+    width: 100%;
+    box-shadow: 5px 3px 5px  rgba(255, 255, 255, 0.9);
+    /* max-width: 1200px; */
+    margin: auto;
+    /* background: rgb(175, 85, 85); */
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+}
+.skills .title::after{
+    content: 'what i can do';
+}
+
+
+h2 {
+    margin-bottom: 20px;
+}
+.skills-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffe605;
+    color: black;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    min-width: 200px;
+    justify-content: center;
+    flex: 1 1 1;
+    max-width: 250px;
+}
+.skill i {
+    font-size: 24px;
+}
+.skill:hover {
+    background: rgb(255, 255, 255);
+}
+
+/*---------------Adding Works styling---------------*/
+.works{
+    background-color: #000000;
+    color: #ffe605;
+   
+}
+
+.works h3{
+    font-family: Georama;
+  
+}
+.works .title::after{
+    content: "recent projects";
+
+}
+.post-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
+    gap: 20px;
+    justify-content: center;
+    font-family: Georama;
+    margin-top: 15px;
+}
+
+.thumbnail{
+    width: 100%;
+    height: 250px;
+    display: block;
+    object-fit: cover;
+}
+.post-preview{
+    background-color: #fff;
+    padding: 25px;
+}
+
+.post{
+    border: 1px solid #c1c1c1;
+    box-shadow: -8px -3px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -8px -3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -8px -3px 5px 0px rgba(0,0,0,0.75);
+}
+.post a{
+    font-size: 14px;
+}
+.post-title{
+    color: black;
+}
+.post-intro{
+    color: #4b5156;
+    font-size: 14px;
+    padding-top: 10px;
+}
+.read-more{
+    color: #17a2b8;
+}
+.read-more:hover{
+    color: rgb(117, 90, 0);
+}
+/*Testimonial styling section*/
+.testify .title::after{
+    content: 'what clients say';
+}
+.testify .carousel .card{
+    background: #c9bb00;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.3s ease-in;
+}
+.testify .carousel .card:hover{
+    background: rgb(152, 155, 10);
+}
+
+.testify .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in;
+
+}
+.testify .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.testify .carousel .card .text{
+    color: #000000;
+    font-family: Courgette, sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0 7px 0;
+}
+.testify .carousel .box p{
+    color: #000000;
+}
+.testify .carousel .card img{
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    border: 5px solid rgb(0, 0, 0);
+}
+.testify .carousel .card:hover img{
+    border-color: #fff;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid rgb(238, 234, 5)!important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: rgb(255, 255, 255)!important;
+}
+
+
+/*contact styling section*/
+
+.contact {
+    background-color: #000000;
+    color: white;
+}
+.contact .title::after{
+    content: 'get in touch';
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    color: white;
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: rgb(216, 213, 17);
+}
+.contact .contact-content .info .head{
+    font-weight: 600;
+}
+.contact .contact-content .info .sub-title{
+    color: #dadd18;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .fields,
+.contact .right form .fields, .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .email{
+    margin-left: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: Georama, sans-serif;
+}
+
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button{
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 6px;
+    background: rgb(207, 187, 7);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact .right form .button a{
+    color: rgb(255, 255, 255);
+}
+.contact .right form .button button:hover{
+    color: rgb(207, 7, 33);
+    background: none;
+}
+
+
+/*Footer section styling starts here*/
+footer{
+    background: #222121;
+    padding: 20px 23px;
+    color: #fff;
+    font-family: Georama, sans-serif;
+    box-shadow: 13px 50px 10px rgba(0, 0, 0, 0.9);
+}
+footer span a{
+    color: rgb(252, 227, 10);
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+/* reveal effect */
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease-in;
+}
+.reveal.active{
+    position: relative;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.reveal-1 {
+    opacity: 0;
+    transform: translateX(-100px); /* Start from the left */
+    transition: all 0.6s ease-in-out;
+}
+
+.reveal-1.right {
+    transform: translateX(100px); /* Start from the right */
+}
+
+.reveal-1.active {
+    opacity: 1;
+    transform: translateX(0); /* Move into view */
+}
+
+/*Responsive media Querry*/
+@media (max-width: 1300px){
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+@media (max-width: 1104px){
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+    .main-container{
+        width: 95%;
+    }
+
+}
+
+@media (max-width: 991px){
+    .max-width{
+        padding: 0;
+    }
+}
+
+@media (max-width: 947px){
+    .max-width{
+        padding: 0 50px;
+    }
+
+    .menu-btn{
+        color: #fff;
+        font-size: 23px;
+        cursor: pointer;
+        display: block;
+        z-index: 999;
+    }
+    /* .right-column{
+        display: none;
+    } */
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: -100%;
+        background: black;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 800px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    } 
+
+    .about .about-content .left{
+        display: flex;
+        justify-content: center
+        margin 0 auto 60px;
+    } 
+    .about .about-content .right{
+        flex: 100%;
+    } 
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .brand-range{
+        display: flex;
+        font-weight: lighter;
+        font-size: 200;
+        padding: 2em;
+    }
+    .skills .skills-content .column
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    /* .intro-wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas: 'left-column right-column';
+    }
+    .right-column{
+        justify-content: center;
+    } */
+    
+    
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .brand-range{
+        display: flex;
+       
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    /* .right-column{
+        display: none;
+    } */
+
+    .home .home-content a{
+        font-size: 20px;
+        padding: 9px 25px;
+    } 
+    .services .serv-content .card,
+    .skills .skills-content .column{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .brand-range{
+        display: flex;
+    }
+    /* contact */
+    .contact .right form .button a{
+        color: rgb(27, 26, 26);
+         background-color: none    
+   }
+    .contact .right form .button button:hover{
+    color: rgb(207, 7, 33);
+       
+    }
+    /* home content */
+    
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+}
